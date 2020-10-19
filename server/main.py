@@ -3,10 +3,11 @@ from tensorflow.keras.models import load_model
 from pydantic import BaseModel
 from stacktags import model_utils
 import pickle
+import os
 
 app = FastAPI()
 
-model = load_model(r'models\feedforward_model.h5')
+model = load_model(os.path.join('models', 'feedforward_model.h5'))
 
 
 class StackPost(BaseModel):
