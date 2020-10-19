@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from stacktags import model_utils
 import pickle
 import os
+import uvicorn
 
 app = FastAPI()
 
@@ -44,3 +45,6 @@ async def predict_tags(post: StackPost):
     return {
         "output": list(tags_dict.keys())
     }
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -2,4 +2,4 @@ curl http://localhost:5000
 
 docker build -t facemask -f docker\\development.dockerfile .
 
-docker run -p 5000:5000  stacktags uvicorn server.main:app --reload
+docker run -p 8000:8000  stacktags python server.main
