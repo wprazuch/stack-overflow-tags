@@ -1,5 +1,5 @@
 curl http://localhost:5000
 
-docker build -t facemask -f docker\\development.dockerfile .
+docker build -t stacktags -f docker\\development.dockerfile .
 
-docker run -p 8000:8000  stacktags python server.main
+docker run -p 8000:8000  stacktags python -m server.main
